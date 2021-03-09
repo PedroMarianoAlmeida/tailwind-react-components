@@ -81,7 +81,7 @@ const MobilePages = ({ showResponsiveMenu, pageLinks, responsiveMenu, currentPag
         <div className={`${showResponsiveMenu ? 'visible' : 'hidden'} sm:hidden`} id="mobile-menu">
             <div className="px-2 pt-2 pb-3 space-y-1">
                 {
-                    pageLinks.pages.map(page => (
+                    pageLinks.map(page => (
                         <a
                             href={page.href}
                             className={
@@ -105,7 +105,7 @@ const DesktopPages = ({ pageLinks, desktopMenu, currentPage }) => {
         <div className="hidden sm:block sm:ml-6">
             <div className="flex space-x-4">
                 {
-                    pageLinks.pages.map(page => (
+                    pageLinks.map(page => (
                         <a
                             href={page.href}
                             className={
@@ -127,8 +127,8 @@ const Logo = ({ logo }) => {
 
     return (
         <div className="flex-shrink-0 flex items-center">
-            <img className="block lg:hidden h-8 w-auto" src={logo.mobileSrc} alt="Workflow" />
-            <img className="hidden lg:block h-8 w-auto" src={logo.desktopSrc} alt="Workflow" />
+            <img className="block lg:hidden h-8 w-auto" src={logo.mobileSrc} alt={logo.alt} />
+            <img className="hidden lg:block h-8 w-auto" src={logo.desktopSrc} alt={logo.alt} />
         </div>
     )
 }
