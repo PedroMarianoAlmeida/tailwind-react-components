@@ -86,8 +86,8 @@ const MobilePages = ({ showResponsiveMenu, pageLinks, responsiveMenu, currentPag
                             href={page.href}
                             className={
                                 page.name === currentPage ?
-                                    responsiveMenu.currentPageClasses :
-                                    responsiveMenu.defaultPageClasses
+                                    responsiveMenu.responsiveCurrentPageClasses :
+                                    responsiveMenu.responsiveDefaultPageClasses
                             }
                         >
                             {page.name}
@@ -110,8 +110,8 @@ const DesktopPages = ({ pageLinks, desktopMenu, currentPage }) => {
                             href={page.href}
                             className={
                                 page.name === currentPage ?
-                                    desktopMenu.currentPageClasses :
-                                    desktopMenu.defaultPageClasses
+                                    desktopMenu.desktopCurrentPageClasses :
+                                    desktopMenu.desktopDefaultPageClasses
                             }
                         >
                             {page.name}
